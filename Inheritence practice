@@ -1,0 +1,76 @@
+public class Practice_Set_10 {
+    public static class Circle{
+       public int radius;
+       public Circle(){
+           System.out.println("im non parameterized circle constructor...");
+       }
+       public Circle(int r){
+           this.radius=r;
+           System.out.println("this is parametrized circle constructor....");
+       }
+       public double area(){
+          return Math.PI*radius*radius;
+       }
+
+    }
+
+    public static class Rectangle{
+        int length;
+        int breadth;
+        public  int getl(){
+            return length;
+        }
+        public int setl(int l){
+            this.length=l;
+            return l;
+        }
+
+        public Rectangle(int l,int b){
+            this.length=l;
+            this.breadth=b;
+
+        }
+        public int area(){
+            return length*breadth;
+        }
+        public float perimeter(){
+            return 2*(length+breadth);
+        }
+
+    }
+    public static class Cuboid extends Rectangle{
+        int height;
+        public Cuboid(int l,int b,int h){
+            super(l,b);
+            this.height=h;
+        }
+        public float volume(){
+            return length*breadth*height;
+        }
+
+    }
+
+    public static class Cylinder extends Circle{
+public int height;
+public Cylinder(int r,int h){
+    super(r);
+    this.height=h;
+    System.out.println(" I am cylinder constructor....");
+
+
+}
+public double volume(){
+    return Math.PI*radius*radius*height;
+}
+    }
+    public static void main(String[] args) {
+//       Cylinder c1=new Cylinder(7,6);
+//        System.out.println(c1.volume());
+       // Circle c2=new Circle(7);
+        Cuboid objc=new Cuboid(12,31,10);
+        objc.setl(67);
+        System.out.println(objc.getl());
+
+
+    }
+}
