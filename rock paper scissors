@@ -1,0 +1,49 @@
+import java.util.Scanner;
+import java.util.Random;
+
+public class Rock_paper_scissor {
+    public static void main(String[] args) {
+        Scanner sc=new Scanner(System.in);
+        String compchoice=" ";
+        System.out.println("enter your choice:");
+        String usechoice=sc.next();
+        double rand=Math.floor(Math.random()*3);
+        if(rand==1){
+            compchoice="stone";
+        }
+        else if(rand==2){
+            compchoice="paper";
+        }
+        else{
+            compchoice="scissors";
+        }
+        System.out.println("computers choice:"+compchoice);
+        if(compchoice.equals("scissors") && usechoice.equals("paper")){
+            System.out.println("computer wins....try another tym...");
+        }
+        else if(compchoice.equals("stone")&& usechoice.equals("paper")){
+            System.out.println("user wins....");
+        }
+        else if(compchoice.equals("paper") && usechoice.equals("paper")){
+            System.out.println("math tie... try again");
+        }
+        else if(compchoice.equals("scissors") && usechoice.equals("stone")){
+            System.out.println("user wins ..congrats");
+        }
+        else if(compchoice.equals("stone") && usechoice.equals("stone")){
+            System.out.println("tie....");
+        }
+        else if(compchoice.equals("paper") && usechoice.equals("stone")){
+            System.out.println("computer wins...try again");
+        }
+        else if(compchoice.equals("scissors") && usechoice.equals("scissors")){
+            System.out.println("tie");
+        }
+        else if(compchoice.equals("stone") && usechoice.equals("scissors")){
+            System.out.println("computer wins....");
+        }
+        else {
+            System.out.println("user wins.....");
+        }
+    }
+}
