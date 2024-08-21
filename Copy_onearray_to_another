@@ -1,0 +1,22 @@
+public class copy_one_array_to_another {
+    public static void main(String[] args) {
+        //initialize first array
+        int arr1[]={12,67,89,65,70,30};
+        //initialize another array
+        int arr2[]= new int[arr1.length];
+        //copy elements of one array to another
+        for(int i=0;i<arr1.length;i++){
+            arr2[i]=arr1[i];
+        }
+        //print first array
+        for(int i=0;i< arr1.length;i++){
+            System.out.print(arr1[i]+" ");
+        }
+        //print second array
+        System.out.println();
+        for(int i=0;i< arr1.length;i++){
+            System.out.print(arr2[i]+" ");
+        }
+        System.out.println();
+    }
+}
